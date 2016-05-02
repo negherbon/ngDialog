@@ -61,7 +61,8 @@
             ariaLabelledBySelector: null,
             ariaDescribedById: null,
             ariaDescribedBySelector: null,
-            bodyClassName: 'ngdialog-open'
+            bodyClassName: 'ngdialog-open',
+            width: null
         };
 
         this.setForceHtmlReload = function (_useIt) {
@@ -540,6 +541,10 @@
 
                             if (options.appendClassName) {
                                 $dialog.addClass(options.appendClassName);
+                            }
+
+                            if (options.width) {
+                                $dialog[0].querySelector('.ngdialog-content').style.width = options.width + 'px';
                             }
 
                             if (options.disableAnimation) {
