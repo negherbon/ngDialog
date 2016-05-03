@@ -376,9 +376,9 @@ If specified, the first matching element is used. See [Accessibility](#Accessibi
 
 This option allows you to control the dialog's width. Default value is `null` (unspecified)
 
-If you provide a number 'px' metric will be used, on the other hand you are able to provide a specific metric using String like `'40%'`
+If you provide a Number, 'px' will be appended. To use a custom metric, use a String, e.g. `'40%'`.
 
-For example, the following will add `width: 400px;` to the dialog opened:
+For example, the following will add `width: 400px;` to the dialog when opened:
 
 ```
 ngDialog.open({
