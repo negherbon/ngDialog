@@ -545,7 +545,11 @@
 
                             if (options.width) {
                                 var $dialogContent = $dialog[0].querySelector('.ngdialog-content');
-                                (angular.isString(options.width)) ? $dialogContent.style.width = options.width : $dialogContent.style.width = options.width + 'px';
+                                if (angular.isString(options.width)) {
+                                    $dialogContent.style.width = options.width;
+                                } else {
+                                    $dialogContent.style.width = options.width + 'px';
+                                }
                             }
 
                             if (options.disableAnimation) {
